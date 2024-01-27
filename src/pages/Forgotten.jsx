@@ -19,7 +19,7 @@ const Forgotten = () => {
     };
 
     return (
-        <div className="flex flex-col my-48 mx-32 p-4 rounded-2xl bg-gray-300 justify-center items-center">
+        <div className="flex flex-col my-48  mx-11  sm:mx-32 p-4 rounded-2xl bg-gray-300 justify-center items-center">
             <h2 className="text-4xl font-extrabold">Forgot Password</h2>
             {resetSent ? (
                 <div>

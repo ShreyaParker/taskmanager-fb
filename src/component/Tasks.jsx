@@ -43,7 +43,7 @@ const TaskCards = ({ task }) => {
     };
 
     return (
-        <div className={`p-5 ${task.status ? 'bg-green-300' : 'bg-gray-300'}`}>
+        <div className={`sm:p-5 p-5 rounded-xl ${task.status ? 'bg-green-300' : 'bg-gray-300'}`}>
             {!isEditing ? (
                 <div>
                     <h1 className="font-extrabold text-2xl">{task.title}</h1>
