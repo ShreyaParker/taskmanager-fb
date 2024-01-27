@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 
 const Navbar = () => {
     const { user, logout } = useAuth();
-    console.log(user);
+
     const navigate = useNavigate();
 
     return (
@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="flex gap-2">
                 {user ? (
                     <div className="flex gap-2">
-                        <h1>{user?.email}</h1>
+                        <h1>{user?.displayName}</h1>
                         <button onClick={() => logout()}>Logout</button>
                     </div>
                 ) : (

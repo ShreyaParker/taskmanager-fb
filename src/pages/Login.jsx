@@ -18,16 +18,22 @@ const Login = () => {
         signInWithEmailAndPassword(auth, user.email, user.password)
             .then( (userCredential)=> {
                 const loggedInUser = userCredential.user;
+                alert("welcome " + loggedInUser.displayName)
                 console.log(loggedInUser)
                 login(loggedInUser)
                 navigate("/")
             }
 
-    ).catch(error => console.log(error))
+    ).catch(error => {
+                console.log(error)
+
+                alert(error.message)
+            }
+        )
     };
 
     return (
-        <div className="flex flex-col my-48 mx-32 p-4 rounded-2xl bg-gray-300 justify-center items-center">
+        <div className="flex flex-col my-48 mx-11 sm:mx-32 p-4 rounded-2xl bg-gray-300 justify-center items-center">
             <h2 className="text-4xl font-extrabold">Login</h2>
             <form onSubmit={handleLogin} className="text-xl gap-3">
                 <div className="flex flex-col">
